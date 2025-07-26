@@ -1,8 +1,6 @@
 import os
 import subprocess
-import sys
 import venv
-import sqlite3
 
 venv_dir = "venv"
 
@@ -23,20 +21,20 @@ def install_requirements():
     print("Setup complete.")
 
 
-def create_tables():
+# def create_tables():
 
-    with open("query/create.sql", "r") as file:
-        sql_script = file.read()
+#     with open("query/create.sql", "r") as file:
+#         sql_script = file.read()
         
-    conn = sqlite3.connect("myDataBase.db")
+#     conn = sqlite3.connect("myDataBase.db")
 
-    cursor = conn.cursor()
-    cursor.executescript(sql_script)
+#     cursor = conn.cursor()
+#     cursor.executescript(sql_script)
 
-    print("Tables created successfully.")
+#     print("Tables created successfully.")
 
 
 if __name__ == "__main__":
     set_virual_env()
     install_requirements()
-    create_tables()
+    # create_tables()

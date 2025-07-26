@@ -1,10 +1,7 @@
 import streamlit as st
-from langchain.prompts import PromptTemplate
 from query_engine.sql_query_graph import answer_question  # Custom graph you built
 
 # --- Custom CSS ---
-# --- Custom CSS ---
-import streamlit as st
 
 st.title("📊 SQL Assistant")
 
@@ -25,6 +22,7 @@ st.sidebar.markdown("""
 
 💡 *Try asking:*  
 - "List all customers from Germany."  
+- "List all the schemas in MS SQL database."                      
 - "Which event had the most ticket sales?"  
 - "What’s the average birth weight in the natality dataset?"
 """)
